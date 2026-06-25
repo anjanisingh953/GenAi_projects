@@ -40,7 +40,7 @@ app.post('/upload',upload.single('audio'),async(req,res)=>{
     console.log(response.text);
     const rawText = response.text;
     writeFileSync('audioText.txt',rawText,'utf-8');
-    res.send(`<h1>{rawText}</h1>`)
+    res.send(`<h1>${rawText}</h1>`)
 });
 
 
